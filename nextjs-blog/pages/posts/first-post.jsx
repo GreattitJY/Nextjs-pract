@@ -16,14 +16,12 @@ export default function FirstPost() {
     setScrollFlag(isScrolled);
   };
 
-  const throttle = (callback, delay) => {
-    let timer = null;
+  const throttle = (callback) => {
     return () => {
-      if (timer) return;
-      timer = window.setTimeout(() => {
+      timer = requestAnimationFrame(() => {
         callback();
-        timer = null;
-      }, delay);
+        console.log("request");
+      });
     };
   };
 
