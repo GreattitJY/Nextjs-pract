@@ -37,13 +37,14 @@ export default function Chart() {
           // size: 10, // there is no footer by default
         },
         callbacks: {
-          title: (data) => {
+          title: () => {
             return "security risk";
           },
           label: (item) => {
             const count = item.dataset.data[item.dataIndex];
-            // const
-            return item.label + ":" + count;
+            const label = item.label;
+            const info = ` ${label} : ${count}`;
+            return info;
           },
         },
       },
