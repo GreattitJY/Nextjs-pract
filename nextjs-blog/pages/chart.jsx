@@ -53,14 +53,14 @@ export default function Chart() {
 
   return (
     <>
-      <Wrap>
+      <div style={{ width: "500px", height: "500px", margin: "0 auto" }}>
         <Doughnut data={data} options={options} />
-      </Wrap>
+      </div>
     </>
   );
 }
 
-const Wrap = styled.div`
+const Wrapper = styled.div`
   width: 500px;
   height: 500px;
   margin: 0 auto;
